@@ -1,5 +1,5 @@
 # 2020 Winternship Public API Explorer
-For this wintternship, we are building a proof of concept for a public API explorer. Users can interface with the different endpoints, or access information from them more easily without needing to run curl requests. 
+For this winternship, we are building a proof of concept for a public API explorer. Users can interface with the different endpoints, or access information from them more easily without needing to run curl requests. 
 
 ## Gitpod Setup
 1. Create a new branch in Github, and copy the issue URL at the end of `https://gitpod.io/#` or add the chrome extension (which adds the GitPod button to your Github account)

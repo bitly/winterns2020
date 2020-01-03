@@ -4,16 +4,10 @@ For this winternship, we are building a proof of concept for a public API explor
 ## Gitpod Setup & Commits
 1. Open a workspace in gitpod by going to `https://gitpod.io/github.com/bitly/winterns2020` or add the chrome extension (which adds the GitPod button to your Github account)
 2. Create a new branch off of master `git checkout -b <YOUR BRANCH>`
-3. Set up your virtual environment (below)
+3. Install flask through requirements.txt file, `pip install -r requirements.txt`
 4. Make your changes
 5. Commit changes to Github using the commands `git add <file names> `, `git commit -m {commit message}`, `git push --set-upstream origin <YOUR BRANCH>`.
 6. On winterns2020 repo in Github, navigate to `branches`, find your branch, and click on the open pull request button. 
-
-### Virtual Environment 
-1. Create a virtual environment called venv by running `virtualenv venv -p python3.7`
-2. Activate venv `source venv/bin/activate`
-3. Install flask through requirements.txt file, `pip install -r requirements.txt`
-4. To deactivate the virtual environment, run `source deactivate `
 
 ### To Run the Flask App
 1. Make sure the virtual environment is activated and that you are in the directory with the `app.py` file

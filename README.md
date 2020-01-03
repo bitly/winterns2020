@@ -12,3 +12,4 @@ For this winternship, we are building a proof of concept for a public API explor
 3. Run ```flask run```
 4. Click to port 500 through Gitpod, or preview in the sidebar.
 
+### That's it! 🎉

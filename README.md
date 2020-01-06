@@ -9,7 +9,7 @@ For this winternship, we are building a proof of concept for a public API explor
 be used the first time you push your branch to the remote, from then on you can just do `git push`)
 5. On winterns2020 repo in Github, navigate to `branches`, find your branch, and click on the open pull request button. 
 
-### To Run the App
+### Run Locally 
 1. Make sure that you are in the directory with the `app.py` file (you can determine this by typing `ls -l` into the command line to list the files your current directory
 and ensuring that you see `app.py` there)
 2. Install node packages through `npm install`

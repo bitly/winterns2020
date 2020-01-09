@@ -3,9 +3,9 @@ For this winternship, we are building a proof of concept for a public API explor
 
 Points of Contact!
 
-Frontend - David, Kevin
-Backend - Grace, Gabriel, Diana
-QA - Pawan
+Frontend - David, Kevin  
+Backend - Grace, Gabriel, Diana  
+QA - Pawan  
 
 ### Gitpod Setup & Saving Work to Github
 1. Open a workspace in gitpod by going to `https://gitpod.io/github.com/bitly/winterns2020` or add the chrome extension (which adds the GitPod button to your Github account)

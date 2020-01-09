@@ -3,11 +3,11 @@ For this winternship, we are building a proof of concept for a public API explor
 
 ### Wintern Leads Points of Contact
 
-Frontend - David, Kevin  
-Backend - Grace, Gabriel, Diana  
-QA - Pawan  
+Ask us anything, anytime!
 
-Ask us anything, anytime.
+Backend - Grace, Gabriel, Diana  
+Frontend - David, Kevin  
+QA - Pawan  
 
 ### Gitpod Setup & Saving Work to Github
 1. Open a workspace in gitpod by going to `https://gitpod.io/github.com/bitly/winterns2020` or add the chrome extension (which adds the GitPod button to your Github account)

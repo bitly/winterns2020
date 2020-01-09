@@ -5,5 +5,5 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    hi = "Hello Winterns Test"
+    hi = "Hello Winterns Test. Katya. "
     return render_template('app.html', text=hi)

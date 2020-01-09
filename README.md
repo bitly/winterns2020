@@ -3,7 +3,7 @@ For this winternship, we are building a proof of concept for a public API explor
 
 ### Wintern Leads Points of Contact
 
-Ask us anything, anytime!
+Slack us, find us in person, ask us anything!
 
 Backend - Grace, Gabriel, Diana  
 Frontend - David, Kevin  

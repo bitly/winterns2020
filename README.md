@@ -1,11 +1,13 @@
 # 2020 Winternship Public API Explorer
 For this winternship, we are building a proof of concept for a public API explorer. Users can interface with the different endpoints, or access information from them more easily without needing to run curl requests. 
 
-### Points of Contact!
+### Points of Contact
 
 Frontend - David, Kevin  
 Backend - Grace, Gabriel, Diana  
 QA - Pawan  
+
+Ask us anything, anytime.
 
 ### Gitpod Setup & Saving Work to Github
 1. Open a workspace in gitpod by going to `https://gitpod.io/github.com/bitly/winterns2020` or add the chrome extension (which adds the GitPod button to your Github account)

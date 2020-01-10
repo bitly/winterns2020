@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -25,11 +26,28 @@ class App extends React.Component {
                     response: res.data
                 })
             })
+
+class App extends React.Component {
+    constructor(props) {
+    super(props);
+     this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        console.log('this is working!!')
     }
 
     render() {
         return ( 
-            <div>
+          
+            <div align="center" >
+                <button className='getbutton' onClick={this.handleClick}>Get</button>
+                <button className='postbutton' onClick={this.handleClick}>Post</button>
+                <button className='patchbutton' onClick={this.handleClick}>Patch</button>
+                <button className='deletebutton' onClick={this.handleClick}>Delete</button>
+            </div>
+         );
+         <div>
                 Bitly Public API Explorer
                 <p> { 
                     typeof this.state.response === 'string' ? 
@@ -44,3 +62,4 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
+

@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import axios from 'axios';
+import Form from './Form.jsx';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            response: 'Default Data',
-            submitButtonShown: false
+            response: '',
+            submitButtonShown: false,
+            showForm: false
         };
         this.handleClick = this.handleClick.bind(this);
         this.toggleButton = this.toggleButton.bind(this);
@@ -16,7 +18,7 @@ class App extends React.Component {
 
     toggleButton() {
         this.setState({
-            submitButtonShown: true
+            showForm: true
         });
     }
 
@@ -50,13 +52,12 @@ class App extends React.Component {
                     JSON.stringify(this.state.response)
                     }
                  </p>
-                
+                 
                 {
-                    this.state.submitButtonShown ?
-                    <button onClick={this.handleClick}>SUBMIT!</button> :
-                    ''
+                    this.state.showForm ?
+                    <Form /> : ''
                 }
-                
+
                <p>{ JSON.stringify(this.state) }</p> 
             </div>
                 

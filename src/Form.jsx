@@ -34,12 +34,12 @@ render(){
             placeholder= "Key" 
             type="text" name='key' onChange={this.handleChange}  
             /> :
-            <input 
+            <input
             placeholder= "Value" 
             type="text" name='key' onChange={this.handleChange}
             />
-             <button 
-             onClick={this.handleClick}>SUBMIT!
+             <button className="submit"
+             onClick={this.handleClick}>SUBMIT
              </button> 
            </form>
 

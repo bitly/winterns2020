@@ -78,7 +78,7 @@ class App extends React.Component {
                     <center><h2>Results</h2></center> 
             </div>   {/*  results box code ends  */}
             {/* logo image. for some reason it only shows if i have the image tag in the body not in the header idk why */}
-                <img className= "logo" alt="bitly logo"src="Bitly.svg"/>
+                <img className= "logo" alt="bitly logo"src="https://cdn.iconscout.com/icon/free/png-256/bitly-1-432498.png"/>
   
 
              <div> {/*takes response from bitly api and turns it into json string  */}

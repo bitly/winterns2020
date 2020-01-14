@@ -39,7 +39,7 @@ handleKeyValueChange(event, type) {
 render(){
     let{authToken, apiEndpoint, newKeyVal} = this.state
     return (
-       <div>
+       <div className="inputForms">
                 <label>API Endpoint</label><br />
                     <input 
                     type="text" name='apiEndpoint'onChange={this.handleChange} 

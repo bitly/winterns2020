@@ -51,6 +51,8 @@ background: #F2F8FC;
   left: 440px;
   top: 68px;
   position: absolute;
+  outline: none;
+  cursor: pointer;
 }
 .postbutton {
   background-color: #61B3DE; 
@@ -66,6 +68,8 @@ background: #F2F8FC;
   left: 560px;
   top: 68px;
   position: absolute;
+  outline: none;
+  cursor: pointer;
 }
 .patchbutton {
   background-color: #E2986B; 
@@ -81,6 +85,8 @@ background: #F2F8FC;
   left: 680px;
   top: 68px;
   position: absolute;
+  outline: none;
+  cursor: pointer;
 }
 .deletebutton {
   background-color: #E37F7F; 
@@ -96,6 +102,8 @@ background: #F2F8FC;
   left:800px;
   top: 68px;
   position: absolute;
+  outline: none;
+  cursor: pointer;
 }
 .container{
  display: flex; /* or inline-flex */
@@ -170,6 +178,8 @@ top: 150px;
   left: 250px;
   top: 95px;
   position: absolute;
+  outline: none;
+  cursor: pointer;
 }
  /* submit button code ends */
 

@@ -33,7 +33,7 @@ render(){
             <input
             placeholder= "Key" 
             type="text" name='key' onChange={this.handleChange}  
-            /> :
+            /> : &nbsp;  
             <input
             placeholder= "Value" 
             type="text" name='key' onChange={this.handleChange}

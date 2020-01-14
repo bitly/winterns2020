@@ -163,7 +163,27 @@ left: 220px;
 top: 150px;
 }/* code ends */
 
-/* submit button code begins */
+/* add button code begins */
+ .add{
+  background-color: #023044; 
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  /* left: 142px; */
+  left: 320px;
+  top: 95px;
+  position: absolute;
+  outline: none;
+  cursor: pointer;
+}
+ /* add button code ends */
+
+ /* submit button code begins */
  .submit{
   background-color: #023044; 
   border: none;
@@ -175,8 +195,8 @@ top: 150px;
   font-size: 16px;
   border-radius: 12px;
   /* left: 142px; */
-  left: 250px;
-  top: 95px;
+  left: 700px;
+  top: 400px;
   position: absolute;
   outline: none;
   cursor: pointer;

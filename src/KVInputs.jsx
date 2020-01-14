@@ -2,8 +2,8 @@ import React from "react"
 
 const KVInputs = (props) => {
     return (
-        props.newKeyVal.map((val, idx) => {
-            let keyId = `key-${idx}`, ValueId = `value-${idx}`
+        props.params.map((val, idx) => {
+            let keyId = `key-${idx}`, ValueId = `: value-${idx}`
             return (
                 <div key={idx}>
                     <label htmlFor={keyId}>{`Key #${idx + 1}`}</label>

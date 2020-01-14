@@ -9,7 +9,7 @@ export default class Form extends React.Component {
     this.state = {
         authToken: ' ',
         apiEndpoint: '',
-        newKeyVal: [{key:"", value:""}],
+        params: [{key:"", value:""}],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,7 +23,7 @@ export default class Form extends React.Component {
 addKeyVal = (event) => {
     console.log("WE CLICKED THE ADD BUTTON") 
     this.setState((prevState) => ({
-      newKeyVal: [...prevState.newKeyVal, {key:"", value:""}],
+      params: [...prevState.params, {key:"", value:""}],
     }));
 }
 
@@ -37,7 +37,7 @@ handleKeyValueChange(event, type) {
 }
  
 render(){
-    let{authToken, apiEndpoint, newKeyVal} = this.state
+    let{authToken, apiEndpoint, params} = this.state
     return (
        <div className="inputForms">
                 <label>API Endpoint</label><br />
@@ -48,7 +48,7 @@ render(){
                 <input 
                 type="text" name='authToken' onChange={this.handleChange} 
             /> <br /> <br />
-            <KVInputs handleChange={this.handleKeyValueChange} newKeyVal={newKeyVal}/>
+            <KVInputs handleChange={this.handleKeyValueChange} params={params}/>
              <button className = 'add' onClick={this.addKeyVal}>Add+</button>
               <br /> <input className = "submit" onSubmit={this.handleSubmit} type="submit" value="Submit" />
        </div>

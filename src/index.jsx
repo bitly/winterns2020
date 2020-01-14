@@ -11,6 +11,7 @@ class App extends React.Component {
         this.state = {
             response: '',
             showForm: false,
+            showIntro: true,
         };
         this.handleClick = this.handleClick.bind(this);
         this.toggleButton = this.toggleButton.bind(this);
@@ -18,7 +19,8 @@ class App extends React.Component {
 
     toggleButton() {
         this.setState({
-            showForm: true
+            showForm: true,
+            showIntro: false
         });
     }
 
@@ -58,14 +60,18 @@ class App extends React.Component {
            
             <div className="centerCard">  {/* CENTER CARD WITH INTRO code begins  */}
 
-                <p className="intro">Introduction Welcome to the Bitly API! If you'd like to use Bitly to shorten, brand, share, 
+               {
+                   this.state.showIntro ?
+                <p className="intro">
+                    Introduction Welcome to the Bitly API! If you'd like to use Bitly to shorten, brand, share, 
                     or retrieve data from links programmatically, you've come to the right place. 
                     If you're interested in integrating 
                     your app or software platform with Bitly, you'll need to register and authenticate your service with our API. To do 
                     so please contact us at API_sales@bit.ly 
                     We currently provide our documentation in the form of an OpenAPI 2.0 document. 
                     We do not support any code-generation at this time but feel free to use the specification if you would like.
-                </p>
+                </p> : ' '
+               }
             </div> {/* CENTER CARD WITH INTRO code ends   */}
 
             <div className="resultsBox">  {/* results box code begins  */}

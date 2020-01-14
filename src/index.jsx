@@ -39,13 +39,38 @@ class App extends React.Component {
     render() {
         return ( 
           <>
-            <div align="center" >
+            <div className="rectangle"> {/*  dark blue full width banner code begins  */}
+                <h1>Bitly API Explorer</h1>
+            </div> {/* dark blue full width banner code ends */}
+
+            <div className="blueRect"> {/* baby blue verticle banner code begins  */}
+                <center>
+                more information
+                </center>
+             </div> {/* baby blue verticle banner code ends  */}
+
+            <div align="center" > {/* code for get post patch delete buttons begins */}
                 <button className='getbutton' onClick={this.toggleButton}>Get</button>
                 <button className='postbutton' onClick={this.toggleButton}>Post</button>
                 <button className='patchbutton' onClick={this.toggleButton}>Patch</button>
                 <button className='deletebutton' onClick={this.toggleButton}>Delete</button>
-            </div>
-            <div>
+            </div> {/* code for get post patch delete buttons ends  */}
+           
+            <div className="centerCard">  {/* CENTER CARD WITH INTRO code begins  */}
+
+                <p>Introduction Welcome to the Bitly API! If you'd like to use Bitly to shorten, brand, share, 
+                    or retrieve data from links programmatically, you've come to the right place.
+                </p>
+            </div> {/* CENTER CARD WITH INTRO code ends   */}
+
+            <div className="resultsBox">  {/* results box code begins  */}
+                    <center><h2>Results</h2></center> 
+            </div>   {/*  results box code ends  */}
+            {/* logo image. for some reason it only shows if i have the image tag in the body not in the header idk why */}
+                <img class= "logo" src="Bitly.svg"/>
+  
+
+             <div> {/*takes response from bitly api and turns it into json string  */}
                 <p> { 
                     typeof this.state.response === 'string' ? 
                     this.state.response : 
@@ -60,7 +85,7 @@ class App extends React.Component {
 
                <p>{ JSON.stringify(this.state) }</p> 
             </div>
-                
+                {/* end of json string code */}
             </> 
         );
     }

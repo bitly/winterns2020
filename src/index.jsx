@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import axios from 'axios';
 import Form from './Form.jsx';
+import KVInputs from './KVInputs.jsx';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             response: '',
-            submitButtonShown: false,
-            showForm: false
+            showForm: false,
         };
         this.handleClick = this.handleClick.bind(this);
         this.toggleButton = this.toggleButton.bind(this);
@@ -24,7 +24,7 @@ class App extends React.Component {
 
     handleClick() {
         console.log('BUTTON CLICKED')
-        const SERVER_URL = "https://5000-e75ecd90-54cc-46e0-86c6-2bb579cc2438.ws-us02.gitpod.io"
+        const SERVER_URL = "https://5000-c054af96-2044-4e31-b3db-bf67f98094c6.ws-us02.gitpod.io/"
         console.log(SERVER_URL + '/api')
         axios
             .get(SERVER_URL + '/api')

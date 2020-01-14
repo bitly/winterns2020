@@ -49,8 +49,8 @@ render(){
                 type="text" name='authToken' onChange={this.handleChange} 
             /> <br /> <br />
             <KVInputs handleChange={this.handleKeyValueChange} newKeyVal={newKeyVal}/>
-             <button onClick={this.addKeyVal}>Add+</button>
-              <br /> <input onSubmit={this.handleSubmit} type="submit" value="Submit" />
+             <button className = 'add' onClick={this.addKeyVal}>Add+</button>
+              <br /> <input className = "submit" onSubmit={this.handleSubmit} type="submit" value="Submit" />
        </div>
     )
 }   

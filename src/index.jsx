@@ -58,7 +58,6 @@ class App extends React.Component {
                     <Form /> : ''
                 }
 
-               <p>{ JSON.stringify(this.state) }</p> 
             </div>
                 
             </> 

@@ -32,15 +32,15 @@ addKeyVal = (event) => {
     event.preventDefault();
     }
 
-handleKeyValueChange(event, type, idx) {
-    console.log(type, idx);
+handleKeyValueChange(event, type) {
+    console.log(type);
 }
  
 render(){
     let{authToken, apiEndpoint, newKeyVal} = this.state
     return (
        <div>
-            <label>API Endpoint</label><br />
+                <label>API Endpoint</label><br />
                     <input 
                     type="text" name='apiEndpoint'onChange={this.handleChange} 
                     /> <br /> <br />
@@ -51,7 +51,6 @@ render(){
             <KVInputs handleChange={this.handleKeyValueChange} newKeyVal={newKeyVal}/>
              <button onClick={this.addKeyVal}>Add+</button>
               <br /> <input onSubmit={this.handleSubmit} type="submit" value="Submit" />
-
        </div>
     )
 }   

@@ -9,7 +9,7 @@ state = {
 
 render(){
     return (
-       <div>
+       <div className="inputForms">
            <form>
             Authentification Token: <input id="textbox" type="text" value={this.state.authToken} />
             Authentification Token: <input id="textbox" type="text" />

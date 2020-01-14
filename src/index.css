@@ -124,7 +124,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 12px;
 line-height: 14px;
-text-align: center;
+/* text-align: center; */
 
 color: #000000;
 
@@ -137,7 +137,7 @@ position: fixed;
 width: 320px;
 height: 308px;
 left: 1100px;
-top: 159px;
+top: 145px;
 
 background: #023044;
 }
@@ -146,3 +146,10 @@ background: #023044;
 }
 
 /* result box code ends */
+.inputForms{
+position: absolute;
+left: 200px;
+top: 220px;
+}
+/* code for input forms where you can input stuff */
+   

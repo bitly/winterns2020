@@ -20,7 +20,7 @@ export default class Form extends React.Component {
  
 render(){
     return (
-       <div>
+       <div className="inputForms">
            <form>
                 <label>API Endpoint</label><br />
                     <input 

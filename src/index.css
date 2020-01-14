@@ -109,21 +109,22 @@ position: absolute;
 width: 60%;
 max-width: 60%;
 height: 500px;
-left: 138px;
+left: 200px;
 top: 141px;
 background: #F2F8FC;
 }
 
-.centerCard, p{
+.intro{
 position: absolute;
-left: 173px;
-top: 158px;
-
+/* left: 173px;
+top: 158px; */
+left: 60px;
+top: 159px;
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
-line-height: 14px;
+font-size: 16px;
+line-height: 20px;
 /* text-align: center; */
 
 color: #000000;
@@ -146,10 +147,30 @@ background: #023044;
 }
 
 /* result box code ends */
+
+/* code for input forms where you can input stuff */
 .inputForms{
 position: absolute;
-left: 200px;
-top: 220px;
+left: 220px;
+top: 150px;
+}/* code ends */
+
+/* submit button code begins */
+ .submit{
+  background-color: #023044; 
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  /* left: 142px; */
+  left: 250px;
+  top: 95px;
+  position: absolute;
 }
-/* code for input forms where you can input stuff */
-   
+ /* submit button code ends */
+
+ 

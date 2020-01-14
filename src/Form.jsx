@@ -39,8 +39,9 @@ handleKeyValueChange(event, type) {
 render(){
     let{authToken, apiEndpoint, newKeyVal} = this.state
     return (
-       <div>
-            <label>API Endpoint</label><br />
+       <div className="inputForms">
+           <form>
+                <label>API Endpoint</label><br />
                     <input 
                     type="text" name='apiEndpoint'onChange={this.handleChange} 
                     /> <br /> <br />
@@ -48,10 +49,10 @@ render(){
                 <input 
                 type="text" name='authToken' onChange={this.handleChange} 
             /> <br /> <br />
+
             <KVInputs handleChange={this.handleKeyValueChange} newKeyVal={newKeyVal}/>
              <button onClick={this.addKeyVal}>Add+</button>
               <br /> <input onSubmit={this.handleSubmit} type="submit" value="Submit" />
-
        </div>
     )
 }   

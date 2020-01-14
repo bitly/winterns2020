@@ -1,5 +1,44 @@
+/* logo code starts */
+.logo{
+/* background : url("Bitly.svg"); */
+position: absolute;
+width: 32px;
+height: 32px;
+left: 16px;
+top: 12px;
+}
+/* logo code ends */
+
+/* dark blue full width banner css code begins */
+.rectangle, h1{
+  color: white;
+  text-align: center;
+} 
+.rectangle{
+position: absolute;
+width: 100%;
+height: 60px;
+left: 0px;
+top: 0px;
+background: #023044;
+}
+/* dark blue full width css banner code ends */
+
+/* light blue horizontal rectangle code start */
+.blueRect{
+position: absolute;
+width: 150px;
+height: 90%;
+left: 10px;
+top: 69px;
+background: #F2F8FC;
+}
+/* light blue horizontal rectangle code ends */
+
+
+/* get post patch delete button css code begins */
 .getbutton {
-  background-color: #5DB6A0; /* Green */
+  background-color: #5DB6A0; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -8,6 +47,10 @@
   display: inline-block;
   font-size: 16px;
   border-radius: 12px;
+  /* left: 142px; */
+  left: 440px;
+  top: 68px;
+  position: absolute;
 }
 .postbutton {
   background-color: #61B3DE; 
@@ -19,9 +62,13 @@
   display: inline-block;
   font-size: 16px;
   border-radius: 12px;
+  /* left: 236px; */
+  left: 560px;
+  top: 68px;
+  position: absolute;
 }
 .patchbutton {
-  background-color: #E2986B; /* Green */
+  background-color: #E2986B; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -30,9 +77,13 @@
   display: inline-block;
   font-size: 16px;
   border-radius: 12px;
+  /* left: 336px; */
+  left: 680px;
+  top: 68px;
+  position: absolute;
 }
 .deletebutton {
-  background-color: #E37F7F; /* Green */
+  background-color: #E37F7F; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -41,4 +92,85 @@
   display: inline-block;
   font-size: 16px;
   border-radius: 12px;
+  /* left: 445px; */
+  left:800px;
+  top: 68px;
+  position: absolute;
 }
+.container{
+ display: flex; /* or inline-flex */
+ justify-content:center;
+}
+/* get post patch delete button css code ends */
+
+/* CENTER CARD WITH INTRO */
+.centerCard{
+position: absolute;
+width: 60%;
+max-width: 60%;
+height: 500px;
+left: 200px;
+top: 141px;
+background: #F2F8FC;
+}
+
+.intro{
+position: absolute;
+/* left: 173px;
+top: 158px; */
+left: 60px;
+top: 159px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+/* text-align: center; */
+
+color: #000000;
+
+}
+/* end of centercard */
+
+/* result box code begins*/
+.resultsBox{
+position: fixed;
+width: 320px;
+height: 308px;
+left: 1100px;
+top: 145px;
+
+background: #023044;
+}
+.resultsBox, h2{
+  color:white;
+}
+
+/* result box code ends */
+
+/* code for input forms where you can input stuff */
+.inputForms{
+position: absolute;
+left: 220px;
+top: 150px;
+}/* code ends */
+
+/* submit button code begins */
+ .submit{
+  background-color: #023044; 
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  /* left: 142px; */
+  left: 250px;
+  top: 95px;
+  position: absolute;
+}
+ /* submit button code ends */
+
+ 

@@ -22,6 +22,7 @@ export default class Form extends React.Component {
 
 addKeyVal = (event) => {
     console.log("WE CLICKED THE ADD BUTTON") 
+    console.log(this.state); 
     this.setState((prevState) => ({
       params: [...prevState.params, {key:"", value:""}],
     }));
@@ -32,10 +33,37 @@ addKeyVal = (event) => {
     event.preventDefault();
     }
 
-handleKeyValueChange(event, type) {
-    console.log(type);
+ handleKeyValueChange = (event, type, idx) => {
+    //console.log(type, idx);
+    // let self = this;
+
+    if(type === 'key') {
+        // console.log('in here');
+        const newParams = [
+            ...this.state.params.slice(0, idx),
+            { key: event.target.value, value: this.state.params[idx].value }, 
+            ...this.state.params.slice(idx + 1)
+        ]
+
+        this.setState((prevState) => ({
+            params: newParams
+        }));
+    } 
+
+    if(type === 'value') {
+        const newParams = [
+            ...this.state.params.slice(0, idx),
+            { key: this.state.params[idx].key, value: event.target.value }, 
+            ...this.state.params.slice(idx + 1)
+        ]
+
+        this.setState((prevState) => ({
+            params: newParams
+        }));
+    }
+    
 }
- 
+
 render(){
     let{authToken, apiEndpoint, params} = this.state
     return (

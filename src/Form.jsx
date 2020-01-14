@@ -40,7 +40,6 @@ render(){
     let{authToken, apiEndpoint, newKeyVal} = this.state
     return (
        <div className="inputForms">
-           <form>
                 <label>API Endpoint</label><br />
                     <input 
                     type="text" name='apiEndpoint'onChange={this.handleChange} 

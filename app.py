@@ -5,7 +5,8 @@ import requests
 import json 
 
 app = Flask(__name__)
-
+app.secret_key = "secret"
+ 
 @app.route("/", methods = ['GET'])
 def hello():
     hi = "Hello Winterns Test. Katya."
@@ -15,8 +16,11 @@ def hello():
 @app.route('/api', methods=['GET', 'POST'])
 def quote():
     
-    response = requests.get('https://api-ssl.bitly.com/v4/user', headers={"Authorization": "Bearer  "})
-    return (response.json())
+    auth_token = request.json['authToken'] 
+
+    response = requests.get('https://api-ssl.bitly.com/v4/user', headers={"Authorization": "Bearer " + auth_token})
+     
+    return (response.json()) 
 
 
 

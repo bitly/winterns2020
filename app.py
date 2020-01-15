@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import (request, session, render_template, abort, jsonify)
 from flask import render_template 
 import requests
 import json 
@@ -14,8 +15,7 @@ def hello():
 @app.route('/api', methods=['GET', 'POST'])
 def quote():
     
-    response = requests.get('https://api-ssl.bitly.com/v4/user', headers={"Authorization": "Bearer token"})
-    
+    response = requests.get('https://api-ssl.bitly.com/v4/user', headers={"Authorization": "Bearer  "})
     return (response.json())
 
 

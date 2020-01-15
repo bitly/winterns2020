@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import KVInputs from "./KVInputs.jsx";
+import axios from 'axios';
 
 export default class Form extends React.Component {
  constructor(props) {
     super(props);
     this.state = {
+        response: '',
         authToken: ' ',
         apiEndpoint: '',
         params: [{key:"", value:""}],
@@ -28,9 +30,20 @@ addKeyVal = (event) => {
     }));
 }
 
- handleSubmit(event) {
-    alert('Form Submitted');
-    event.preventDefault();
+ handleSubmit() {
+    // alert('Form Submitted');
+    // event.preventDefault();
+    console.log('BUTTON CLICKED')
+        const SERVER_URL = "https://5000-e10392f9-49c0-4ef4-b19b-c41b8d2d5e6c.ws-us02.gitpod.io/"
+        console.log(SERVER_URL + '/api')
+        axios
+            .get(SERVER_URL + '/api')
+            .then((res) => {
+                // console.log(res) 
+                this.setState({
+                    response: res.data
+                })
+            })
     }
 
  handleKeyValueChange = (event, type, idx) => {
@@ -77,9 +90,21 @@ render(){
                 type="text" name='authToken' onChange={this.handleChange} 
             /> <br /> <br />
             <KVInputs handleChange={this.handleKeyValueChange} params={params}/>
-             <button className = 'add' onClick={this.addKeyVal}>Add+</button>
-              <br /> <input className = "submit" onSubmit={this.handleSubmit} type="submit" value="Submit" />
+             <button className = 'add' onClick={this.handleSubmit}>Add+</button>
+              
+             <div className="resultsBox">  {/* results box code begins  */}
+                    <center><h2>Results</h2></center> 
+                    <center><p> { 
+                    typeof this.state.response === 'string' ? 
+                    this.state.response : 
+                    JSON.stringify(this.state.response)
+                    }
+                 </p></center> 
+            </div>   {/*  results box code ends  */} 
+
+              <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>
        </div>
     )
 }   
 }  
+ReactDOM.render(<Form />, document.getElementById('app'));

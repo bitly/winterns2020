@@ -17,9 +17,10 @@ def hello():
 def quote():
     
     auth_token = request.json['authToken'] 
+    endpoint = request.json['apiEndpoint']
 
-    response = requests.get('https://api-ssl.bitly.com/v4/user', headers={"Authorization": "Bearer " + auth_token})
-     
+    response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
+ 
     return (response.json()) 
 
 

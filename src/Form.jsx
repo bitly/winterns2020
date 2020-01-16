@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import KVInputs from "./KVInputs.jsx";
 import axios from 'axios';
+import ReactJson from 'react-json-view'
+
 
 export default class Form extends React.Component {
  constructor(props) {
     super(props);
     this.state = {
-        response: '',
+        response: {},
         authToken: ' ',
         apiEndpoint: '',
         params: [{key:"", value:""}],
@@ -32,11 +34,12 @@ addKeyVal = (event) => {
 
 handleSubmit() {
     console.log('BUTTON CLICKED')
-        const SERVER_URL = "https://5000-e10392f9-49c0-4ef4-b19b-c41b8d2d5e6c.ws-us02.gitpod.io/"
+        const SERVER_URL = "https://5000-db30d818-43f2-4f4b-9b62-1bcef4387d56.ws-us02.gitpod.io/"
         console.log(SERVER_URL + '/api')
         axios
             .post(SERVER_URL + 'api', {apiEndpoint: this.state.apiEndpoint, authToken: this.state.authToken })
             .then((res) => {   
+                console.log(res.data)
                 this.setState({
                     response: res.data
                 })
@@ -87,15 +90,11 @@ render(){
             /> <br /> <br />
             <KVInputs handleChange={this.handleKeyValueChange} params={params}/>
              <button className = 'add' onClick={this.handleSubmit}>Add+</button>
-              
              <div className="resultsBox">  {/* results box code begins  */}
                     <center><h2>Results</h2></center> 
-                    <center><p> { 
-                    typeof this.state.response === 'string' ? 
-                    this.state.response : 
-                    JSON.stringify(this.state.response)
-                    }
-                 </p></center> 
+                    <center>
+                        <ReactJson src={this.state.response} theme="bright:inverted"/>
+                    </center> 
             </div>   {/*  results box code ends  */} 
 
               <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>

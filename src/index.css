@@ -113,9 +113,10 @@ background: #F2F8FC;
 
 /* CENTER CARD WITH INTRO */
 .centerCard{
-position: absolute;
+position: fixed;
 width: 60%;
-max-width: 60%;
+max-width: 700px;
+min-width: 700px;
 height: 500px;
 left: 200px;
 top: 141px;
@@ -126,9 +127,9 @@ background: #F2F8FC;
 position: absolute;
 /* left: 173px;
 top: 158px; */
-left: 60px;
+left: 40px;
 top: 159px;
-font-family: Roboto;
+font-family: ProximaNova;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -148,6 +149,7 @@ height: 308px;
 left: 1100px;
 top: 145px;
 
+
 background: #023044;
 }
 .resultsBox, h2{
@@ -159,24 +161,42 @@ background: #023044;
 /* code for input forms where you can input stuff */
 .inputForms{
 position: absolute;
-left: 220px;
+left: 400px;
 top: 150px;
-}/* code ends */
+}
+.endpointBox{
+    width:100%;
+    height: 20px;
+}
+
+.authTokenBox{
+    width: 100%;
+    height: 20px;
+}
+
+.keybox{
+    width: 100%;
+    height: 20px;
+}
+.Valuebox{
+    width: 500px;
+    height: 20px;
+}
+/* code ends */
 
 /* add button code begins */
  .add{
   background-color: #023044; 
   border: none;
   color: white;
-  padding: 15px 15px;
+  padding: 4px 4px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
-  /* left: 142px; */
-  left: 320px;
-  top: 95px;
+  font-size: 14px;
+  border-radius: 3px;
+  left: -60px;
+  top: 127px;
   position: absolute;
   outline: none;
   cursor: pointer;
@@ -188,18 +208,17 @@ top: 150px;
   background-color: #023044; 
   border: none;
   color: white;
-  padding: 15px 15px;
+  padding: 4px 4px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
-  /* left: 142px; */
-  left: 700px;
-  top: 400px;
-  position: absolute;
+  font-size: 14px;
+  border-radius: 3px;
+  left: 760px;
+  top: 600px;
   outline: none;
   cursor: pointer;
+  position: fixed;
 }
  /* submit button code ends */
 

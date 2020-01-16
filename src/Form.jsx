@@ -82,21 +82,24 @@ render(){
     let{authToken, apiEndpoint, params} = this.state
     return (
        <div className="inputForms">
+          <center>
                 <label>API Endpoint</label><br />
-                    <input 
+                    <input className ="endpointBox"
                     type="text" name='apiEndpoint'onChange={this.handleChange} 
                     /> <br /> <br />
             <label>Authorization Token</label><br />
-                <input 
+                <input className ="authTokenBox"
                 type="text" name='authToken' onChange={this.handleChange} 
             /> <br /> <br />
+          
             <KVInputs handleChange={this.handleKeyValueChange} params={params}/>
-             <button className = 'add' onClick={this.handleSubmit}>Add+</button>
+             <button className = 'add' onClick={this.addKeyVal}>Add+</button>
+             </center>
              <div className="resultsBox">  {/* results box code begins  */}
                     <center><h2>Results</h2></center> 
-                    <center>
+                    {/* <center>  */}
                         <ReactJson src={this.state.response} theme="bright:inverted"/>
-                    </center> 
+                    {/* </center>  */}
             </div>   {/*  results box code ends  */} 
 
               <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>

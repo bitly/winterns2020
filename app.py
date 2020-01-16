@@ -21,7 +21,7 @@ def quote():
 
     response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
  
-    return (response.json()) 
+    return (response.json())   
 
 
 

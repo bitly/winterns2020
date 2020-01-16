@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import axios from 'axios';
 import Form from './Form.jsx';
+import List from './List.jsx'
 
 class App extends React.Component {
     constructor(props) {
@@ -46,6 +47,7 @@ class App extends React.Component {
             <div className="blueRect"> {/* baby blue verticle banner code begins  */}
                 <center>
                 more information
+                <List/> 
                 </center>
              </div> {/* baby blue verticle banner code ends  */}
 

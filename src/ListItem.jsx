@@ -9,7 +9,8 @@ export default class ListItem extends React.Component {
     return (
      
      <div align="center" >{/*code for left menu begins */}
-     < button className="ListItem" onMouseOver="">{this.props.text}</button>
+
+     <p><a href="https://www.w3schools.com">{this.props.text}</a></p>
     </div>
    
 

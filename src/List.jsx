@@ -5,19 +5,16 @@ export default class List extends React.Component {
   render() {
 
 
-    
+    /* code for the sidebar menu*/
     return (
       <div className="ContainerList">
        {
-           [1, 2, 3, 4, 5, 6, 7, 8, 9].map(number => {
+           ["User","Groups" ,"Organization", 4, 5, 6, 7, 8, 9].map(number => {
                return <ListItem text={number}/>
            })
 
        }
-        {/* <ListItem text={"Home"}/>
-        <ListItem text={"Library"}/>
-        <ListItem text={"FAQS"}/>
-        <ListItem text={"Blah"}/> */}
+    
     </div>
     );
   }

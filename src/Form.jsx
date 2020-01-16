@@ -35,13 +35,13 @@ handleSubmit() {
         const SERVER_URL = "https://5000-e10392f9-49c0-4ef4-b19b-c41b8d2d5e6c.ws-us02.gitpod.io/"
         console.log(SERVER_URL + '/api')
         axios
-            .post(SERVER_URL + 'api', { authToken: this.state.authToken })
+            .post(SERVER_URL + 'api', {apiEndpoint: this.state.apiEndpoint, authToken: this.state.authToken })
             .then((res) => {   
                 this.setState({
-                    response: res.data 
+                    response: res.data
                 })
-            })     
-    }  
+            })   
+    }   
 
  handleKeyValueChange = (event, type, idx) => {
     //console.log(type, idx);

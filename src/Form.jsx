@@ -92,9 +92,9 @@ render(){
              <button className = 'add' onClick={this.handleSubmit}>Add+</button>
              <div className="resultsBox">  {/* results box code begins  */}
                     <center><h2>Results</h2></center> 
-                    <center>
+                    {/* <center>  */}
                         <ReactJson src={this.state.response} theme="bright:inverted"/>
-                    </center> 
+                    {/* </center>  */}
             </div>   {/*  results box code ends  */} 
 
               <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>

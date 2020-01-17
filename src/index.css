@@ -2,22 +2,21 @@
 .logo{
 /* background : url("Bitly.svg"); */
 position: absolute;
-width: 32px;
-height: 32px;
-left: 16px;
-top: 12px;
+width: 40px;
+height: 40px;
+left: 25px;
+top: 16px;
 }
 /* logo code ends */
 
 /* dark blue full width banner css code begins */
-.rectangle, h1{
+.header, h1{
   color: white;
   text-align: center;
 } 
-.rectangle{
+.header{
 position: absolute;
 width: 100%;
-height: 60px;
 left: 0px;
 top: 0px;
 background: #023044;
@@ -26,23 +25,26 @@ background: #023044;
 /* dark blue full width css banner code ends */
 
 /* light blue horizontal rectangle code start, located on the left side of the site */
-.blueRect{
-position: absolute;
-width: 150px;
-height: 90%;
-left: 10px;
-top: 69px;
+.sidebar{
+width: 20%;
+/* position: absolute; */
+/* width: 150px; */
+/* height: 90%; */
+/* left: 10px; */
+/* top: 69px; */
 background: #F2F8FC;
-padding-top: 40px;
+padding-top: 6rem;
 overflow: scroll;
 font-family: ProximaNova;
+float: left;
+display: inline-block;
 }
 /* light blue horizontal rectangle code ends */
 
 
 /* get post patch delete button css code begins */
 .getbutton {
-  background-color: #5DB6A0; 
+  background-color: #139c2a; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -52,9 +54,9 @@ font-family: ProximaNova;
   font-size: 16px;
   border-radius: 12px;
   /* left: 142px; */
-  left: 440px;
+  /* left: 440px;
   top: 68px;
-  position: absolute;
+  position: absolute; */
   outline: none;
   cursor: pointer;
 }
@@ -69,9 +71,9 @@ font-family: ProximaNova;
   font-size: 16px;
   border-radius: 12px;
   /* left: 236px; */
-  left: 560px;
+  /* left: 560px;
   top: 68px;
-  position: absolute;
+  position: absolute; */
   outline: none;
   cursor: pointer;
 }
@@ -86,9 +88,9 @@ font-family: ProximaNova;
   font-size: 16px;
   border-radius: 12px;
   /* left: 336px; */
-  left: 680px;
+  /* left: 680px;
   top: 68px;
-  position: absolute;
+  position: absolute; */
   outline: none;
   cursor: pointer;
 }
@@ -103,36 +105,45 @@ font-family: ProximaNova;
   font-size: 16px;
   border-radius: 12px;
   /* left: 445px; */
-  left:800px;
+  /* left:800px;
   top: 68px;
-  position: absolute;
+  position: absolute; */
   outline: none;
   cursor: pointer;
 }
 .container{
  display: flex; /* or inline-flex */
- justify-content:center;
+ /* justify-content:center; */
 }
 /* get post patch delete button css code ends */
 
+.main {
+    display: flex;
+    width: 98vw;
+    height: 100vh;
+}
+
 /* CENTER CARD WITH INTRO */
+
+.center {
+    padding: 5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.centerButtons {
+    position: relative;
+}
 .centerCard{
-position: fixed;
-width: 60%;
-max-width: 700px;
-min-width: 700px;
-height: 500px;
-left: 200px;
-top: 141px;
-background: #F2F8FC;
+    position: relative;
 }
 
 .intro{
-position: absolute;
+/* position: absolute; */
 /* left: 173px;
 top: 158px; */
-left: 40px;
-top: 159px;
+/* left: 40px; */
+/* top: 159px; */
 font-family: ProximaNova;
 font-style: normal;
 font-weight: normal;
@@ -140,7 +151,7 @@ font-size: 16px;
 line-height: 20px;
 /* text-align: center; */
 
-color: #000000;
+color: #b8cbd4;
 
 }
 /* end of centercard */
@@ -154,7 +165,7 @@ left: 1100px;
 top: 145px;
 
 
-background: #023044;
+background: #b8cbd4;
 }
 .resultsBox, h2{
   color:white;
@@ -190,7 +201,7 @@ top: 150px;
 
 /* add button code begins */
  .add{
-  background-color: #023044; 
+  background-color: #b8cbd4; 
   border: none;
   color: white;
   padding: 4px 4px;
@@ -209,7 +220,7 @@ top: 150px;
 
  /* submit button code begins */
  .submit{
-  background-color: #023044; 
+  background-color: #b8cbd4; 
   border: none;
   color: white;
   padding: 4px 4px;
@@ -235,11 +246,12 @@ top: 150px;
   color:black;
   display: block;
   font-family: ProximaNova;
-  overflow: scroll;
-
 }
 .sidenav a:hover {
   color:#818181;
+}
+.methodButton {
+    margin-right: 2rem;
 }
 /* making on letter the color of the buttons ins the side nav */
 .Get{

@@ -18,33 +18,31 @@ def quote():
     
     auth_token = request.json['authToken'] 
     endpoint = request.json['apiEndpoint']
-    params = request.json['paramsList']
+    params = request.json['params']
+    Method= request.json['Method']
 
-    print(params)
-    response = requests.post('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token}, json={"long_url":"https://www.youtube.com/watch?v=uvgBKO7CGzY"})
-
-    # response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
-    params = {}
-    # if 'params' in request.json:
-        # params = request.json['params']
-    # method = request.json['method']
-    method = 'GET'
-
-    # params = {'Key1', 'Value1'}
-    # params = {'Key2', 'Value2'}
+    if Method=='GET':
+        if params:
+            response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token}, json=params)
+        else:
+            response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
+          
+    elif Method=='POST': 
+        if params:
+            response = requests.post('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token}, json=params)
+        else:
+            response = requests.post('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
+    elif Method=='PATCH': 
+        if params:
+            response = requests.patch('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token}, json=params)
+        else:
+            response = requests.patch('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
+    elif Method=='DELETE': 
+        if params:
+            response = requests.delete('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token}, json=params)
+        else:
+            response = requests.delete('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
     
-
-
-    if method == 'GET':
-        response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
-    elif method == 'POST':
-        response = requests.post('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
-    elif method == 'PATCH':
-        response = requests.patch('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
-    elif method == 'DELETE':
-        response = requests.delete('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
-   
- 
     return (response.json())   
 
 

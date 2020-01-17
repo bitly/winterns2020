@@ -10,22 +10,19 @@ export default class Form extends React.Component {
     super(props);
     this.state = {
         response: {},
-        authToken: ' ',
+        authToken: '',
         apiEndpoint: '',
-        params: [{key:" ", value:" "}],
+        params: [{key:"", value:""}],
         
-    };
-    // const paramsList = this.state.params.map(item => (<h2>{item.key}:{item.value} </h2>))
-    
+    };    
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleKeyValueChange - this.handleKeyValueChange.bind(this);
   }
-
+  
  handleChange(event) {
      this.setState({ [event.target.name]: event.target.value })
-
 }
 
 addKeyVal = (event) => {
@@ -39,11 +36,22 @@ addKeyVal = (event) => {
 
 handleSubmit() {
     console.log('BUTTON CLICKED')
-        const SERVER_URL = "https://5000-db30d818-43f2-4f4b-9b62-1bcef4387d56.ws-us02.gitpod.io/"
-        console.log(SERVER_URL + '/api')
-        const paramsList = this.state.params.map(item => (item.key + ":" + item.value))
+    const SERVER_URL = "https://5000-db30d818-43f2-4f4b-9b62-1bcef4387d56.ws-us02.gitpod.io/"
+    console.log(SERVER_URL + '/api')
+        // const paramsList = this.state.params.map(item => (item.key + ":" + item.value))
+    const arrayToObject = (array) =>
+        array.reduce((obj, item) => {
+            if(item.key) {
+                obj[item.key] = item.value
+            }
+            return obj
+    }, {})
+ 
+   const keyvalObject = arrayToObject(this.state.params)
+   console.log(keyvalObject) 
+
         axios
-            .post(SERVER_URL + 'api', {apiEndpoint: this.state.apiEndpoint, authToken: this.state.authToken, paramsList})
+            .post(SERVER_URL + 'api', {apiEndpoint: this.state.apiEndpoint, authToken: this.state.authToken, params: keyvalObject, Method:this.props.Method})
             .then((res) => {   
                 console.log(res.data)
                 this.setState({
@@ -52,34 +60,27 @@ handleSubmit() {
             })   
     }   
 
- handleKeyValueChange = (event, type, idx) => {
-    //console.log(type, idx);
-    
-    if(type === 'key') {
-        // console.log('in here');
+ handleKeyValueChange = (event, type, idx) => {    
+    if(type === 'key') { 
         const newParams = [
             ...this.state.params.slice(0, idx),
             { key: event.target.value, value: this.state.params[idx].value }, 
             ...this.state.params.slice(idx + 1)
-        ]
-
+        ] 
         this.setState((prevState) => ({
-            params: newParams
+            params: [...prevState.params, {key:"", value:""}],
         }));
-    } 
-
+    }  
     if(type === 'value') {
         const newParams = [
             ...this.state.params.slice(0, idx),
             { key: this.state.params[idx].key, value: event.target.value }, 
             ...this.state.params.slice(idx + 1)
-        ]
-
+        ] 
         this.setState((prevState) => ({
             params: newParams
         }));
-    }
-    
+    }   
 }
 
 render(){
@@ -106,10 +107,8 @@ render(){
                         <ReactJson src={this.state.response} theme="bright:inverted"/>
                     {/* </center>  */}
             </div>   {/*  results box code ends  */} 
-
-              <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>
-       </div>
-    )
-}   
-}  
-ReactDOM.render(<Form />, document.getElementById('app'));
+                <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>
+        </div>
+        )
+    }   
+} 

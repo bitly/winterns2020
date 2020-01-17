@@ -18,10 +18,12 @@ def quote():
     
     auth_token = request.json['authToken'] 
     endpoint = request.json['apiEndpoint']
-    params = request.json['paramsList']
+    params = request.json['params']
 
-    print(params)
-    response = requests.post('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token}, json={"long_url":"https://www.youtube.com/watch?v=uvgBKO7CGzY"})
+    if params:
+        response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token}, json=params)
+    else:
+        response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
 
     # response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
  

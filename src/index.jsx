@@ -10,6 +10,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {   
+            value: '',
             showForm: false,
             showIntro: true,
         };
@@ -17,8 +18,9 @@ class App extends React.Component {
         this.toggleButton = this.toggleButton.bind(this);
     }
 
-    toggleButton() {
+    toggleButton(param) {
         this.setState({
+            value: param,
             showForm: true,
             showIntro: false
         });
@@ -28,6 +30,7 @@ class App extends React.Component {
     render() {
         return ( 
           <>
+          {/* <Form hello={'hello'} Method={this.state.value} /> */}
             <div className="rectangle"> {/*  dark blue full width banner code begins  */}
                 <h1>Bitly API Explorer</h1>
             </div> {/* dark blue full width banner code ends */}
@@ -50,10 +53,10 @@ class App extends React.Component {
              </div> {/* baby blue verticle banner code ends  */}
 
             <div align="center" > {/* code for get post patch delete buttons begins */}
-                <button className='getbutton' onClick={this.toggleButton}>Get</button>
-                <button className='postbutton' onClick={this.toggleButton}>Post</button>
-                <button className='patchbutton' onClick={this.toggleButton}>Patch</button>
-                <button className='deletebutton' onClick={this.toggleButton}>Delete</button>
+                <button className='getbutton'  onClick={() => this.toggleButton("GET")}>Get</button>
+                <button className='postbutton' onClick={() => this.toggleButton("POST")}>Post</button>
+                <button className='patchbutton' onClick={() => this.toggleButton("PATCH")}>Patch</button>
+                <button className='deletebutton' onClick={() => this.toggleButton("DELETE")}>Delete</button>
             </div> {/* code for get post patch delete buttons ends  */}
            
             <div className="centerCard">  {/* CENTER CARD WITH INTRO code begins  */}
@@ -79,7 +82,7 @@ class App extends React.Component {
              <div> {/*takes response from bitly api and turns it into json string  */}
                 {
                     this.state.showForm ?
-                    <Form /> : ''
+                    <Form Method={this.state.value}/> : ''
                 }
             </div>
                 {/* end of json string code */}

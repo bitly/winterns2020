@@ -23,7 +23,6 @@ export default class Form extends React.Component {
   
  handleChange(event) {
      this.setState({ [event.target.name]: event.target.value })
-
 }
 
 addKeyVal = (event) => {
@@ -52,7 +51,7 @@ handleSubmit() {
    console.log(keyvalObject) 
 
         axios
-            .post(SERVER_URL + 'api', {apiEndpoint: this.state.apiEndpoint, authToken: this.state.authToken, params: keyvalObject})
+            .post(SERVER_URL + 'api', {apiEndpoint: this.state.apiEndpoint, authToken: this.state.authToken, params: keyvalObject, Method:this.props.Method})
             .then((res) => {   
                 console.log(res.data)
                 this.setState({
@@ -69,7 +68,7 @@ handleSubmit() {
             ...this.state.params.slice(idx + 1)
         ] 
         this.setState((prevState) => ({
-            params: newParams
+            params: [...prevState.params, {key:"", value:""}],
         }));
     }  
     if(type === 'value') {
@@ -108,10 +107,8 @@ render(){
                         <ReactJson src={this.state.response} theme="bright:inverted"/>
                     {/* </center>  */}
             </div>   {/*  results box code ends  */} 
-
-              <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>
-       </div>
-    )
-}   
-}  
-ReactDOM.render(<Form />, document.getElementById('app'));
+                <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>
+        </div>
+        )
+    }   
+} 

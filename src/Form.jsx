@@ -36,8 +36,9 @@ addKeyVal = (event) => {
 
 handleSubmit() {
     console.log('BUTTON CLICKED')
-        const SERVER_URL = "https://5000-db30d818-43f2-4f4b-9b62-1bcef4387d56.ws-us02.gitpod.io/"
+        const SERVER_URL = "https://5000-c8783409-d9c7-45c7-a332-1cd6ce9e73fd.ws-us02.gitpod.io/"
         console.log(SERVER_URL + '/api')
+        console.log(this.props.Method)
         axios
             .post(SERVER_URL + 'api', {apiEndpoint: this.state.apiEndpoint, authToken: this.state.authToken })
             .then((res) => {   

@@ -24,7 +24,7 @@ background: #023044;
 }
 /* dark blue full width css banner code ends */
 
-/* light blue horizontal rectangle code start */
+/* light blue horizontal rectangle code start, located on the left side of the site */
 .blueRect{
 position: absolute;
 width: 150px;
@@ -32,6 +32,7 @@ height: 90%;
 left: 10px;
 top: 69px;
 background: #F2F8FC;
+padding-top: 40px;
 }
 /* light blue horizontal rectangle code ends */
 
@@ -222,4 +223,14 @@ top: 150px;
 }
  /* submit button code ends */
 
- 
+/* sidenav text and hover code*/
+.sidenav a {
+  padding: 40px 20px 20px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color:black;
+  display: block;
+}
+.sidenav a:hover {
+  color:#818181;
+}

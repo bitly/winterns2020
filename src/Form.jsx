@@ -60,7 +60,8 @@ handleSubmit() {
             })   
     }   
 
- handleKeyValueChange = (event, type, idx) => {    
+ handleKeyValueChange = (event, type, idx) => { 
+     console.log("typed")   
     if(type === 'key') { 
         const newParams = [
             ...this.state.params.slice(0, idx),
@@ -68,7 +69,7 @@ handleSubmit() {
             ...this.state.params.slice(idx + 1)
         ] 
         this.setState((prevState) => ({
-            params: [...prevState.params, {key:"", value:""}],
+            params: newParams
         }));
     }  
     if(type === 'value') {

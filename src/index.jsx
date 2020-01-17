@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import axios from 'axios';
 import Form from './Form.jsx';
-import List from './List.jsx'
 import KVInputs from './KVInputs.jsx';
 
 
@@ -34,10 +33,14 @@ class App extends React.Component {
             </div> {/* dark blue full width banner code ends */}
 
             <div className="blueRect"> {/* baby blue verticle banner code begins  */}
-                <center>
-                more information
-                <List/> 
-                </center>
+               
+                <div className="sidenav">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+                </div>
+                
              </div> {/* baby blue verticle banner code ends  */}
 
             <div align="center" > {/* code for get post patch delete buttons begins */}

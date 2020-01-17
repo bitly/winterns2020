@@ -7,7 +7,7 @@ const KVInputs = (props) => {
             return (
                 <div key={idx}>
                     <label htmlFor={keyId}>{`Key`}</label>
-                    <input
+                    <input className="keybox"
                         placeholder= {`${idx + 1}`} 
                         type="text"
                         name={keyId}
@@ -15,9 +15,9 @@ const KVInputs = (props) => {
                         id={keyId}
                         className="key"
                         onChange={(e) => props.handleChange(e, 'key', idx)} 
-                    />
+                    />  &nbsp; &nbsp; &nbsp;
                     <label htmlFor={ValueId}>Value</label>
-                    <input
+                    <input className="Valuebox"
                         placeholder= {`${idx + 1}`} 
                         type="text"
                         name={ValueId} 

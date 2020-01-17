@@ -37,7 +37,7 @@ addKeyVal = (event) => {
 
 handleSubmit() {
     console.log('BUTTON CLICKED')
-    const SERVER_URL = "https://5000-a56a3e4c-2b9e-4213-8304-fa121a89ec01.ws-us02.gitpod.io/"
+    const SERVER_URL = "https://5000-db30d818-43f2-4f4b-9b62-1bcef4387d56.ws-us02.gitpod.io/"
     console.log(SERVER_URL + '/api')
         // const paramsList = this.state.params.map(item => (item.key + ":" + item.value))
     const arrayToObject = (array) =>

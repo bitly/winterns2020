@@ -35,10 +35,16 @@ class App extends React.Component {
             <div className="blueRect"> {/* baby blue verticle banner code begins  */}
                
                 <div className="sidenav">
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+                <a href="#"><span className="Get">Retrieve</span> a Bitlink</a>
+                <a href="#"><span className="Get">GET</span> clicks for a Bitlink</a>
+                <a href="#"><span className="Get">Retrieve</span> BitlinkS by Group</a>
+                <a href="#"><span className="Post">Expand</span> a Bitlink</a>
+                <a href="#"><span className="Post">Create</span> a Bitlink</a>
+                <a href="#"><span className="Post">Shorten</span> a Link</a>
+                <a href="#"><span className="Patch">Update</span> a Bitlink</a>
+                <a href="#"><span className="Patch">Update</span> a User</a>
+                <a href="#"><span className="Patch">Update</span> a gGoup</a>
+                <a href="#"><span className="Delete">Delete</span> a Group</a>
                 </div>
                 
              </div> {/* baby blue verticle banner code ends  */}

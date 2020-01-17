@@ -23,8 +23,7 @@ def quote():
     if Method=='GET':
             response = requests.get('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
     elif Method=='POST':
-        payload={'bitlink_id':'http://bit.ly/303C2J0'} 
-        response = requests.post('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token}, params=payload )
+        response = requests.post('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
     elif request.method=='PATCH':
          print("This is Get method")
     elif request.method=='DELETE':

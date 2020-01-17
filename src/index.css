@@ -21,6 +21,7 @@ height: 60px;
 left: 0px;
 top: 0px;
 background: #023044;
+
 }
 /* dark blue full width css banner code ends */
 
@@ -33,6 +34,8 @@ left: 10px;
 top: 69px;
 background: #F2F8FC;
 padding-top: 40px;
+overflow: scroll;
+font-family: ProximaNova;
 }
 /* light blue horizontal rectangle code ends */
 
@@ -161,7 +164,7 @@ background: #023044;
 
 /* code for input forms where you can input stuff */
 .inputForms{
-position: absolute;
+position: fixed;
 left: 400px;
 top: 150px;
 }
@@ -225,17 +228,20 @@ top: 150px;
 
 /* sidenav text and hover code*/
 .sidenav a{
-  padding: 40px 20px 20px 32px;
+  /* padding: 40px 20px 20px 32px; */
+  padding: 20px 10px 10px 22px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
   color:black;
   display: block;
   font-family: ProximaNova;
+  overflow: scroll;
+
 }
 .sidenav a:hover {
   color:#818181;
 }
-
+/* making on letter the color of the buttons ins the side nav */
 .Get{
     color: #5DB6A0;
 }

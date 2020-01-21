@@ -11,6 +11,7 @@ const KVInputs = (props) => {
                         placeholder= {`${idx + 1}`} 
                         type="text"
                         name={keyId}
+                        value={val.key}
                         data-id={idx} 
                         id={keyId}
                         className="key"
@@ -20,7 +21,8 @@ const KVInputs = (props) => {
                     <input className="Valuebox"
                         placeholder= {`${idx + 1}`} 
                         type="text"
-                        name={ValueId} 
+                        name={ValueId}
+                        value={val.value} 
                         data-id={idx}
                         id={ValueId}
                         className="value"

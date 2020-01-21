@@ -18,6 +18,7 @@ export default class Form extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleReset = this.handleReset.bind(this);
     this.handleKeyValueChange - this.handleKeyValueChange.bind(this);
   }
   
@@ -58,7 +59,16 @@ handleSubmit() {
                     response: res.data
                 })
             })   
-    }   
+    }  
+    
+    handleReset(){
+        this.setState({
+            authToken: '',
+            apiEndpoint: '',
+            params: [{key:"", value:""}]
+        });
+
+    }
 
  handleKeyValueChange = (event, type, idx) => { 
      console.log("typed")   
@@ -90,11 +100,11 @@ render(){
        <div className="inputForms">
           <center>
                 <label>API Endpoint</label><br />
-                    <input className ="endpointBox"
+                    <input className ="endpointBox" value={this.state.apiEndpoint}
                     type="text" name='apiEndpoint'onChange={this.handleChange} 
                     /> <br /> <br />
             <label>Authorization Token</label><br />
-                <input className ="authTokenBox"
+                <input className ="authTokenBox" value={this.state.authToken}
                 type="text" name='authToken' onChange={this.handleChange} 
             /> <br /> <br />
           
@@ -109,6 +119,7 @@ render(){
                     {/* </center>  */}
             </div>   {/*  results box code ends  */} 
                 <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>
+                <button onClick={this.handleReset}>RESET</button> 
         </div>
         )
     }   

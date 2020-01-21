@@ -13,7 +13,7 @@ def hello():
     return render_template('app.html', text=hi)
 
 
-@app.route('/api', methods=['GET', 'POST'])
+@app.route('/api', methods=['GET', 'POST', 'PATCH', 'DELETE'])
 def quote():
     
     auth_token = request.json['authToken'] 
@@ -42,7 +42,6 @@ def quote():
             response = requests.delete('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token}, json=params)
         else:
             response = requests.delete('https://api-ssl.bitly.com/v4' + endpoint, headers={"Authorization": "Bearer " + auth_token})
-    
     
     return (response.json())   
 

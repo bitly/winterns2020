@@ -64,15 +64,17 @@ class App extends React.Component {
 
                     {
                         this.state.showIntro ?
-                        <p className="intro">
-                            Introduction: Welcome to the Bitly API! If you'd like to use Bitly to shorten, brand, share, 
+                        <div className="intro">
+                           <p> Introduction: Welcome to the Bitly API! If you'd like to use Bitly to shorten, brand, share, 
                             or retrieve data from links programmatically, you've come to the right place. 
-                            If you're interested in integrating 
+                            If you're interested in integrating</p>
+                            <p>
                             your app or software platform with Bitly, you'll need to register and authenticate your service with our API. To do 
-                            so please contact us at API_sales@bit.ly 
+                            so please contact us at API_sales@bit.ly </p> 
+                           <p>
                             We currently provide our documentation in the form of an OpenAPI 2.0 document. 
-                            We do not support any code-generation at this time but feel free to use the specification if you would like.
-                        </p> : ' '
+                            We do not support any code-generation at this time but feel free to use the specification if you would like. </p> 
+                        </div> : ' '
                     }
                     </div> {/* CENTER CARD WITH INTRO code ends   */}
 

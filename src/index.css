@@ -161,7 +161,7 @@ color: black;
 position: fixed;
 width: 320px;
 height: 308px;
-left: 1100px;
+left: 1000px;
 top: 145px;
 
 
@@ -230,13 +230,30 @@ top: 150px;
   font-size: 14px;
   border-radius: 3px;
   left: 760px;
-  top: 600px;
+  top: 450px;
   outline: none;
   cursor: pointer;
   position: fixed;
 }
  /* submit button code ends */
-
+ /* reset button code */
+ .resetbutton{
+ background-color: #023044; 
+  border: none;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 3px;
+  left: 363px;
+  top: 340px;
+  position: absolute;
+  outline: none;
+  cursor: pointer;
+ }
+ /* reset button code ends */
 /* sidenav text and hover code*/
 .sidenav a{
   /* padding: 40px 20px 20px 32px; */

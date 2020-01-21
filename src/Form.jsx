@@ -118,8 +118,8 @@ render(){
                         <ReactJson src={this.state.response} theme="bright:inverted"/>
                     {/* </center>  */}
             </div>   {/*  results box code ends  */} 
-                <br /> <button className = "submit" onClick={this.handleSubmit}>SUBMIT</button>
-                <button onClick={this.handleReset}>RESET</button> 
+                <br /> <button className = "submit" onClick={this.handleSubmit}>Submit</button>
+                <button className="resetbutton" onClick={this.handleReset}>Reset</button> 
         </div>
         )
     }   

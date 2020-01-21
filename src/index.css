@@ -165,7 +165,7 @@ left: 1100px;
 top: 145px;
 
 
-background: #b8cbd4;
+background: #023044;
 }
 .resultsBox, h2{
   color:white;
@@ -201,7 +201,7 @@ top: 150px;
 
 /* add button code begins */
  .add{
-  background-color: #b8cbd4; 
+  background-color: #023044; 
   border: none;
   color: white;
   padding: 4px 4px;
@@ -220,7 +220,7 @@ top: 150px;
 
  /* submit button code begins */
  .submit{
-  background-color: #b8cbd4; 
+  background-color: #023044; 
   border: none;
   color: white;
   padding: 4px 4px;

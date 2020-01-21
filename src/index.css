@@ -139,11 +139,10 @@ display: inline-block;
 }
 
 .intro{
-/* position: absolute; */
-/* left: 173px;
-top: 158px; */
-/* left: 40px; */
-/* top: 159px; */
+position: absolute; 
+
+top: 158px;
+
 font-family: ProximaNova;
 font-style: normal;
 font-weight: normal;

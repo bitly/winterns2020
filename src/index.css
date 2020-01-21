@@ -61,7 +61,7 @@ display: inline-block;
   cursor: pointer;
 }
 .postbutton {
-  background-color: #61B3DE; 
+  background-color: #38a9e4; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -78,7 +78,7 @@ display: inline-block;
   cursor: pointer;
 }
 .patchbutton {
-  background-color: #E2986B; 
+  background-color: #ea6a1b; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -95,7 +95,7 @@ display: inline-block;
   cursor: pointer;
 }
 .deletebutton {
-  background-color: #E37F7F; 
+  background-color: #e43c3c; 
   border: none;
   color: white;
   padding: 15px 32px;

@@ -11,7 +11,7 @@ export default class Form extends React.Component {
     this.state = {
         response: {},
         authToken: '',
-        apiEndpoint: '',
+        apiEndpoint: this.props.End,
         params: [{key:"", value:""}],
         
     };    

@@ -9,7 +9,8 @@ import KVInputs from './KVInputs.jsx';
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {   
+        this.state = {  
+            value2: '', 
             value: '',
             showForm: false,
             showIntro: true,
@@ -18,8 +19,9 @@ class App extends React.Component {
         this.toggleButton = this.toggleButton.bind(this);
     }
 
-    toggleButton(param) {
+    toggleButton(param, param2) {
         this.setState({
+            value2: param2,
             value: param,
             showForm: true,
             showIntro: false
@@ -38,16 +40,16 @@ class App extends React.Component {
                 <div className="sidebar"> {/* baby blue verticle banner code begins  */}
                 
                     <div className="sidenav">
-                    <a href="#" onClick={() => this.toggleButton("GET")}><span className="Get">Retrieve</span> a Bitlink</a>
-                    <a href="#" onClick={() => this.toggleButton("GET")}><span className="Get">GET</span> clicks for a Bitlink</a>
-                    <a href="#" onClick={() => this.toggleButton("GET")}><span className="Get">Retrieve</span> Bitlinks by Group</a>
-                    <a href="#" onClick={() => this.toggleButton("POST")}><span className="Post">Expand</span> a Bitlink</a>
-                    <a href="#" onClick={() => this.toggleButton("POST")}><span className="Post">Create</span> a Bitlink</a>
-                    <a href="#" onClick={() => this.toggleButton("POST")}><span className="Post">Shorten</span> a Link</a>
-                    <a href="#" onClick={() => this.toggleButton("PATCH")}><span className="Patch">Update</span> a Bitlink</a>
-                    <a href="#" onClick={() => this.toggleButton("PATCH")}><span className="Patch">Update</span> a User</a>
-                    <a href="#" onClick={() => this.toggleButton("PATCH")}><span className="Patch">Update</span> a Goup</a>
-                    <a href="#" onClick={() => this.toggleButton("DELETE")}><span className="Delete">Delete</span> a Group</a>
+                    <a href="#" onClick={() => this.toggleButton("GET",'/bitlinks/{Your_bitlink}')}><span className="Get">Retrieve</span> a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("GET",'/bitlinks/{Your_bitlink}/clicks')}><span className="Get">GET</span> clicks for a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("GET",'/groups/{Your_group_guid}/bitlinks')}><span className="Get">Retrieve</span> Bitlinks by Group</a>
+                    <a href="#" onClick={() => this.toggleButton("POST",'/expand')}><span className="Post">Expand</span> a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("POST",'/bitlinks')}><span className="Post">Create</span> a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("POST",'/shorten')}><span className="Post">Shorten</span> a Link</a>
+                    <a href="#" onClick={() => this.toggleButton("PATCH",'/bitlinks/{bitlink}')}><span className="Patch">Update</span> a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("PATCH",'/user')}><span className="Patch">Update</span> a User</a>
+                    <a href="#" onClick={() => this.toggleButton("PATCH",'/groups/{group_guid}')}><span className="Patch">Update</span> a Group</a>
+                    <a href="#" onClick={() => this.toggleButton("DELETE",'/groups/{group_guid}')}><span className="Delete">Delete</span> a Group</a>
                     </div>
                     
                 </div> {/* baby blue verticle banner code ends  */}
@@ -81,7 +83,7 @@ class App extends React.Component {
                     <div> {/*takes response from bitly api and turns it into json string  */}
                         {
                             this.state.showForm ?
-                            <Form Method={this.state.value}/> : ''
+                            <Form Method={this.state.value} End={this.state.value2}/> : ''
                         }
                     </div> 
                 </div>

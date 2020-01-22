@@ -38,16 +38,16 @@ class App extends React.Component {
                 <div className="sidebar"> {/* baby blue verticle banner code begins  */}
                 
                     <div className="sidenav">
-                    <a href="#" onClick={this.toggleButton}><span className="Get">Retrieve</span> a Bitlink</a>
-                    <a href="#" onClick={this.toggleButton}><span className="Get">GET</span> clicks for a Bitlink</a>
-                    <a href="#" onClick={this.toggleButton}><span className="Get">Retrieve</span> Bitlinks by Group</a>
-                    <a href="#"><span className="Post">Expand</span> a Bitlink</a>
-                    <a href="#"><span className="Post">Create</span> a Bitlink</a>
-                    <a href="#"><span className="Post">Shorten</span> a Link</a>
-                    <a href="#"><span className="Patch">Update</span> a Bitlink</a>
-                    <a href="#"><span className="Patch">Update</span> a User</a>
-                    <a href="#"><span className="Patch">Update</span> a Goup</a>
-                    <a href="#"><span className="Delete">Delete</span> a Group</a>
+                    <a href="#" onClick={() => this.toggleButton("GET")}><span className="Get">Retrieve</span> a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("GET")}><span className="Get">GET</span> clicks for a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("GET")}><span className="Get">Retrieve</span> Bitlinks by Group</a>
+                    <a href="#" onClick={() => this.toggleButton("POST")}><span className="Post">Expand</span> a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("POST")}><span className="Post">Create</span> a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("POST")}><span className="Post">Shorten</span> a Link</a>
+                    <a href="#" onClick={() => this.toggleButton("PATCH")}><span className="Patch">Update</span> a Bitlink</a>
+                    <a href="#" onClick={() => this.toggleButton("PATCH")}><span className="Patch">Update</span> a User</a>
+                    <a href="#" onClick={() => this.toggleButton("PATCH")}><span className="Patch">Update</span> a Goup</a>
+                    <a href="#" onClick={() => this.toggleButton("DELETE")}><span className="Delete">Delete</span> a Group</a>
                     </div>
                     
                 </div> {/* baby blue verticle banner code ends  */}
